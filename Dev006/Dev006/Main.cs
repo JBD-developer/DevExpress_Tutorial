@@ -18,6 +18,11 @@ namespace Dev006
             InitializeComponent();
         }
 
+        private void Main_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void Btn_Click(object sender, EventArgs e)
         {
             switch (((SimpleButton)sender).Name)
@@ -37,5 +42,6 @@ namespace Dev006
                     break;
             }
         }
+
     }
 }
