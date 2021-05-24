@@ -30,12 +30,13 @@ namespace Dev006
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraLayout.ColumnDefinition columnDefinition1 = new DevExpress.XtraLayout.ColumnDefinition();
-            DevExpress.XtraLayout.RowDefinition rowDefinition1 = new DevExpress.XtraLayout.RowDefinition();
-            DevExpress.XtraLayout.RowDefinition rowDefinition2 = new DevExpress.XtraLayout.RowDefinition();
-            DevExpress.XtraLayout.RowDefinition rowDefinition3 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.ColumnDefinition columnDefinition2 = new DevExpress.XtraLayout.ColumnDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition4 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition5 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition6 = new DevExpress.XtraLayout.RowDefinition();
             this.ltc = new DevExpress.XtraLayout.LayoutControl();
             this.txtPhone = new DevExpress.XtraEditors.TextEdit();
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtCountry = new DevExpress.XtraEditors.TextEdit();
             this.txtPostalCode = new DevExpress.XtraEditors.TextEdit();
             this.txtRegion = new DevExpress.XtraEditors.TextEdit();
@@ -48,21 +49,20 @@ namespace Dev006
             this.btnNew = new DevExpress.XtraEditors.SimpleButton();
             this.gdcMain = new DevExpress.XtraGrid.GridControl();
             this.gdvMain = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gdvMain_Col_CustomerID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gdvMain_Col_CompanyName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gdvMain_Col_ContactName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gdvMain_Col_ContactTitle = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gdvMain_Col_Address = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gdvMain_Col_City = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gdvMain_Col_Region = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gdvMain_Col_PostalCode = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gdvMain_Col_Country = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gdvMain_Col_Phone = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gdvMain_Col_Fax = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCustomerID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCompanyName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colContactName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colContactTitle = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAddress = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCity = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colRegion = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPostalCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCountry = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPhone = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFax = new DevExpress.XtraGrid.Columns.GridColumn();
             this.txtAddress1 = new DevExpress.XtraEditors.TextEdit();
             this.txtAddress = new DevExpress.XtraEditors.TextEdit();
             this.txtContactName = new DevExpress.XtraEditors.TextEdit();
-            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtCustomerId = new DevExpress.XtraEditors.TextEdit();
             this.txtKeyword = new DevExpress.XtraEditors.TextEdit();
             this.ltg = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -73,14 +73,14 @@ namespace Dev006
             this.lti_txtCustomerId = new DevExpress.XtraLayout.LayoutControlItem();
             this.lti_txtContactName = new DevExpress.XtraLayout.LayoutControlItem();
             this.lti_txtAddress = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lti_txtFax = new DevExpress.XtraLayout.LayoutControlItem();
             this.lti_txtContactTitle = new DevExpress.XtraLayout.LayoutControlItem();
             this.lti_txtCompanyName = new DevExpress.XtraLayout.LayoutControlItem();
             this.lti_txtCity = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lti_txtRegion = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lti_txtPostalCode = new DevExpress.XtraLayout.LayoutControlItem();
             this.lti_txtCountry = new DevExpress.XtraLayout.LayoutControlItem();
             this.lti_txtPhone = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lti_txtFax = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lti_txtPostalCode = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lti_txtRegion = new DevExpress.XtraLayout.LayoutControlItem();
             this.ltgSub = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -91,6 +91,7 @@ namespace Dev006
             ((System.ComponentModel.ISupportInitialize)(this.ltc)).BeginInit();
             this.ltc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhone.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCountry.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPostalCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRegion.Properties)).BeginInit();
@@ -102,7 +103,6 @@ namespace Dev006
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtContactName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCustomerId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKeyword.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ltg)).BeginInit();
@@ -113,14 +113,14 @@ namespace Dev006
             ((System.ComponentModel.ISupportInitialize)(this.lti_txtCustomerId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lti_txtContactName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lti_txtAddress)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lti_txtFax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lti_txtContactTitle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lti_txtCompanyName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lti_txtCity)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lti_txtRegion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lti_txtPostalCode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lti_txtCountry)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lti_txtPhone)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lti_txtFax)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lti_txtPostalCode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lti_txtRegion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ltgSub)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
@@ -166,6 +166,9 @@ namespace Dev006
             this.txtPhone.StyleController = this.ltc;
             this.txtPhone.TabIndex = 19;
             // 
+            // customerBindingSource
+            // 
+            // 
             // txtCountry
             // 
             this.txtCountry.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "Country", true));
@@ -207,16 +210,16 @@ namespace Dev006
             this.txtCompanyName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "CompanyName", true));
             this.txtCompanyName.Location = new System.Drawing.Point(120, 162);
             this.txtCompanyName.Name = "txtCompanyName";
-            this.txtCompanyName.Size = new System.Drawing.Size(233, 20);
+            this.txtCompanyName.Size = new System.Drawing.Size(216, 20);
             this.txtCompanyName.StyleController = this.ltc;
             this.txtCompanyName.TabIndex = 14;
             // 
             // txtContactTitle
             // 
             this.txtContactTitle.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "ContactTitle", true));
-            this.txtContactTitle.Location = new System.Drawing.Point(453, 162);
+            this.txtContactTitle.Location = new System.Drawing.Point(436, 162);
             this.txtContactTitle.Name = "txtContactTitle";
-            this.txtContactTitle.Size = new System.Drawing.Size(200, 20);
+            this.txtContactTitle.Size = new System.Drawing.Size(217, 20);
             this.txtContactTitle.StyleController = this.ltc;
             this.txtContactTitle.TabIndex = 13;
             // 
@@ -281,132 +284,99 @@ namespace Dev006
             // gdvMain
             // 
             this.gdvMain.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gdvMain_Col_CustomerID,
-            this.gdvMain_Col_CompanyName,
-            this.gdvMain_Col_ContactName,
-            this.gdvMain_Col_ContactTitle,
-            this.gdvMain_Col_Address,
-            this.gdvMain_Col_City,
-            this.gdvMain_Col_Region,
-            this.gdvMain_Col_PostalCode,
-            this.gdvMain_Col_Country,
-            this.gdvMain_Col_Phone,
-            this.gdvMain_Col_Fax});
+            this.colCustomerID,
+            this.colCompanyName,
+            this.colContactName,
+            this.colContactTitle,
+            this.colAddress,
+            this.colCity,
+            this.colRegion,
+            this.colPostalCode,
+            this.colCountry,
+            this.colPhone,
+            this.colFax});
             this.gdvMain.GridControl = this.gdcMain;
             this.gdvMain.Name = "gdvMain";
             this.gdvMain.OptionsView.ColumnAutoWidth = false;
             this.gdvMain.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.False;
             this.gdvMain.OptionsView.ShowGroupPanel = false;
             // 
-            // gdvMain_Col_CustomerID
+            // colCustomerID
             // 
-            this.gdvMain_Col_CustomerID.AppearanceHeader.Options.UseTextOptions = true;
-            this.gdvMain_Col_CustomerID.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gdvMain_Col_CustomerID.Caption = "CustomerID";
-            this.gdvMain_Col_CustomerID.FieldName = "CustomerID";
-            this.gdvMain_Col_CustomerID.Name = "gdvMain_Col_CustomerID";
-            this.gdvMain_Col_CustomerID.Visible = true;
-            this.gdvMain_Col_CustomerID.VisibleIndex = 0;
+            this.colCustomerID.FieldName = "CustomerID";
+            this.colCustomerID.Name = "colCustomerID";
+            this.colCustomerID.Visible = true;
+            this.colCustomerID.VisibleIndex = 0;
             // 
-            // gdvMain_Col_CompanyName
+            // colCompanyName
             // 
-            this.gdvMain_Col_CompanyName.AppearanceHeader.Options.UseTextOptions = true;
-            this.gdvMain_Col_CompanyName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gdvMain_Col_CompanyName.Caption = "CompanyName";
-            this.gdvMain_Col_CompanyName.FieldName = "CompanyName";
-            this.gdvMain_Col_CompanyName.Name = "gdvMain_Col_CompanyName";
-            this.gdvMain_Col_CompanyName.Visible = true;
-            this.gdvMain_Col_CompanyName.VisibleIndex = 1;
+            this.colCompanyName.FieldName = "CompanyName";
+            this.colCompanyName.Name = "colCompanyName";
+            this.colCompanyName.Visible = true;
+            this.colCompanyName.VisibleIndex = 1;
             // 
-            // gdvMain_Col_ContactName
+            // colContactName
             // 
-            this.gdvMain_Col_ContactName.AppearanceHeader.Options.UseTextOptions = true;
-            this.gdvMain_Col_ContactName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gdvMain_Col_ContactName.Caption = "ContactName";
-            this.gdvMain_Col_ContactName.FieldName = "ContactName";
-            this.gdvMain_Col_ContactName.Name = "gdvMain_Col_ContactName";
-            this.gdvMain_Col_ContactName.Visible = true;
-            this.gdvMain_Col_ContactName.VisibleIndex = 2;
+            this.colContactName.FieldName = "ContactName";
+            this.colContactName.Name = "colContactName";
+            this.colContactName.Visible = true;
+            this.colContactName.VisibleIndex = 2;
             // 
-            // gdvMain_Col_ContactTitle
+            // colContactTitle
             // 
-            this.gdvMain_Col_ContactTitle.AppearanceHeader.Options.UseTextOptions = true;
-            this.gdvMain_Col_ContactTitle.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gdvMain_Col_ContactTitle.Caption = "ContactTitle";
-            this.gdvMain_Col_ContactTitle.FieldName = "ContactTitle";
-            this.gdvMain_Col_ContactTitle.Name = "gdvMain_Col_ContactTitle";
-            this.gdvMain_Col_ContactTitle.Visible = true;
-            this.gdvMain_Col_ContactTitle.VisibleIndex = 3;
+            this.colContactTitle.FieldName = "ContactTitle";
+            this.colContactTitle.Name = "colContactTitle";
+            this.colContactTitle.Visible = true;
+            this.colContactTitle.VisibleIndex = 3;
             // 
-            // gdvMain_Col_Address
+            // colAddress
             // 
-            this.gdvMain_Col_Address.AppearanceHeader.Options.UseTextOptions = true;
-            this.gdvMain_Col_Address.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gdvMain_Col_Address.Caption = "Address";
-            this.gdvMain_Col_Address.FieldName = "Address";
-            this.gdvMain_Col_Address.Name = "gdvMain_Col_Address";
-            this.gdvMain_Col_Address.Visible = true;
-            this.gdvMain_Col_Address.VisibleIndex = 4;
+            this.colAddress.FieldName = "Address";
+            this.colAddress.Name = "colAddress";
+            this.colAddress.Visible = true;
+            this.colAddress.VisibleIndex = 4;
             // 
-            // gdvMain_Col_City
+            // colCity
             // 
-            this.gdvMain_Col_City.AppearanceHeader.Options.UseTextOptions = true;
-            this.gdvMain_Col_City.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gdvMain_Col_City.Caption = "City";
-            this.gdvMain_Col_City.FieldName = "City";
-            this.gdvMain_Col_City.Name = "gdvMain_Col_City";
-            this.gdvMain_Col_City.Visible = true;
-            this.gdvMain_Col_City.VisibleIndex = 5;
+            this.colCity.FieldName = "City";
+            this.colCity.Name = "colCity";
+            this.colCity.Visible = true;
+            this.colCity.VisibleIndex = 5;
             // 
-            // gdvMain_Col_Region
+            // colRegion
             // 
-            this.gdvMain_Col_Region.AppearanceHeader.Options.UseTextOptions = true;
-            this.gdvMain_Col_Region.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gdvMain_Col_Region.Caption = "Region";
-            this.gdvMain_Col_Region.FieldName = "Region";
-            this.gdvMain_Col_Region.Name = "gdvMain_Col_Region";
-            this.gdvMain_Col_Region.Visible = true;
-            this.gdvMain_Col_Region.VisibleIndex = 6;
+            this.colRegion.FieldName = "Region";
+            this.colRegion.Name = "colRegion";
+            this.colRegion.Visible = true;
+            this.colRegion.VisibleIndex = 6;
             // 
-            // gdvMain_Col_PostalCode
+            // colPostalCode
             // 
-            this.gdvMain_Col_PostalCode.AppearanceHeader.Options.UseTextOptions = true;
-            this.gdvMain_Col_PostalCode.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gdvMain_Col_PostalCode.Caption = "PostalCode";
-            this.gdvMain_Col_PostalCode.FieldName = "PostalCode";
-            this.gdvMain_Col_PostalCode.Name = "gdvMain_Col_PostalCode";
-            this.gdvMain_Col_PostalCode.Visible = true;
-            this.gdvMain_Col_PostalCode.VisibleIndex = 7;
+            this.colPostalCode.FieldName = "PostalCode";
+            this.colPostalCode.Name = "colPostalCode";
+            this.colPostalCode.Visible = true;
+            this.colPostalCode.VisibleIndex = 7;
             // 
-            // gdvMain_Col_Country
+            // colCountry
             // 
-            this.gdvMain_Col_Country.AppearanceHeader.Options.UseTextOptions = true;
-            this.gdvMain_Col_Country.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gdvMain_Col_Country.Caption = "Country";
-            this.gdvMain_Col_Country.FieldName = "Country";
-            this.gdvMain_Col_Country.Name = "gdvMain_Col_Country";
-            this.gdvMain_Col_Country.Visible = true;
-            this.gdvMain_Col_Country.VisibleIndex = 8;
+            this.colCountry.FieldName = "Country";
+            this.colCountry.Name = "colCountry";
+            this.colCountry.Visible = true;
+            this.colCountry.VisibleIndex = 8;
             // 
-            // gdvMain_Col_Phone
+            // colPhone
             // 
-            this.gdvMain_Col_Phone.AppearanceHeader.Options.UseTextOptions = true;
-            this.gdvMain_Col_Phone.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gdvMain_Col_Phone.Caption = "Phone";
-            this.gdvMain_Col_Phone.FieldName = "Phone";
-            this.gdvMain_Col_Phone.Name = "gdvMain_Col_Phone";
-            this.gdvMain_Col_Phone.Visible = true;
-            this.gdvMain_Col_Phone.VisibleIndex = 9;
+            this.colPhone.FieldName = "Phone";
+            this.colPhone.Name = "colPhone";
+            this.colPhone.Visible = true;
+            this.colPhone.VisibleIndex = 9;
             // 
-            // gdvMain_Col_Fax
+            // colFax
             // 
-            this.gdvMain_Col_Fax.AppearanceHeader.Options.UseTextOptions = true;
-            this.gdvMain_Col_Fax.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gdvMain_Col_Fax.Caption = "Fax";
-            this.gdvMain_Col_Fax.FieldName = "Fax";
-            this.gdvMain_Col_Fax.Name = "gdvMain_Col_Fax";
-            this.gdvMain_Col_Fax.Visible = true;
-            this.gdvMain_Col_Fax.VisibleIndex = 10;
+            this.colFax.FieldName = "Fax";
+            this.colFax.Name = "colFax";
+            this.colFax.Visible = true;
+            this.colFax.VisibleIndex = 10;
             // 
             // txtAddress1
             // 
@@ -435,10 +405,6 @@ namespace Dev006
             this.txtContactName.StyleController = this.ltc;
             this.txtContactName.TabIndex = 6;
             // 
-            // customerBindingSource
-            // 
-            this.customerBindingSource.DataSource = typeof(Dev006.Customer);
-            // 
             // txtCustomerId
             // 
             this.txtCustomerId.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "CustomerID", true));
@@ -457,6 +423,7 @@ namespace Dev006
             this.txtKeyword.Size = new System.Drawing.Size(300, 20);
             this.txtKeyword.StyleController = this.ltc;
             this.txtKeyword.TabIndex = 4;
+            this.txtKeyword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKeyword_KeyPress);
             // 
             // ltg
             // 
@@ -468,20 +435,20 @@ namespace Dev006
             this.ltgSub});
             this.ltg.LayoutMode = DevExpress.XtraLayout.Utils.LayoutMode.Table;
             this.ltg.Name = "ltg";
-            columnDefinition1.SizeType = System.Windows.Forms.SizeType.Percent;
-            columnDefinition1.Width = 100D;
+            columnDefinition2.SizeType = System.Windows.Forms.SizeType.Percent;
+            columnDefinition2.Width = 100D;
             this.ltg.OptionsTableLayoutGroup.ColumnDefinitions.AddRange(new DevExpress.XtraLayout.ColumnDefinition[] {
-            columnDefinition1});
-            rowDefinition1.Height = 69D;
-            rowDefinition1.SizeType = System.Windows.Forms.SizeType.AutoSize;
-            rowDefinition2.Height = 213D;
-            rowDefinition2.SizeType = System.Windows.Forms.SizeType.AutoSize;
-            rowDefinition3.Height = 367D;
-            rowDefinition3.SizeType = System.Windows.Forms.SizeType.AutoSize;
+            columnDefinition2});
+            rowDefinition4.Height = 69D;
+            rowDefinition4.SizeType = System.Windows.Forms.SizeType.AutoSize;
+            rowDefinition5.Height = 213D;
+            rowDefinition5.SizeType = System.Windows.Forms.SizeType.AutoSize;
+            rowDefinition6.Height = 367D;
+            rowDefinition6.SizeType = System.Windows.Forms.SizeType.AutoSize;
             this.ltg.OptionsTableLayoutGroup.RowDefinitions.AddRange(new DevExpress.XtraLayout.RowDefinition[] {
-            rowDefinition1,
-            rowDefinition2,
-            rowDefinition3});
+            rowDefinition4,
+            rowDefinition5,
+            rowDefinition6});
             this.ltg.Size = new System.Drawing.Size(677, 669);
             this.ltg.TextVisible = false;
             // 
@@ -560,21 +527,12 @@ namespace Dev006
             this.lti_txtAddress.Text = "Address : ";
             this.lti_txtAddress.TextSize = new System.Drawing.Size(93, 14);
             // 
-            // lti_txtFax
-            // 
-            this.lti_txtFax.Control = this.txtAddress1;
-            this.lti_txtFax.Location = new System.Drawing.Point(316, 144);
-            this.lti_txtFax.Name = "lti_txtFax";
-            this.lti_txtFax.Size = new System.Drawing.Size(317, 24);
-            this.lti_txtFax.Text = "Fax : ";
-            this.lti_txtFax.TextSize = new System.Drawing.Size(93, 14);
-            // 
             // lti_txtContactTitle
             // 
             this.lti_txtContactTitle.Control = this.txtContactTitle;
-            this.lti_txtContactTitle.Location = new System.Drawing.Point(333, 48);
+            this.lti_txtContactTitle.Location = new System.Drawing.Point(316, 48);
             this.lti_txtContactTitle.Name = "lti_txtContactTitle";
-            this.lti_txtContactTitle.Size = new System.Drawing.Size(300, 24);
+            this.lti_txtContactTitle.Size = new System.Drawing.Size(317, 24);
             this.lti_txtContactTitle.Text = "ContactTitle : ";
             this.lti_txtContactTitle.TextSize = new System.Drawing.Size(93, 14);
             // 
@@ -583,7 +541,7 @@ namespace Dev006
             this.lti_txtCompanyName.Control = this.txtCompanyName;
             this.lti_txtCompanyName.Location = new System.Drawing.Point(0, 48);
             this.lti_txtCompanyName.Name = "lti_txtCompanyName";
-            this.lti_txtCompanyName.Size = new System.Drawing.Size(333, 24);
+            this.lti_txtCompanyName.Size = new System.Drawing.Size(316, 24);
             this.lti_txtCompanyName.Text = "CompanyName : ";
             this.lti_txtCompanyName.TextSize = new System.Drawing.Size(93, 14);
             // 
@@ -595,24 +553,6 @@ namespace Dev006
             this.lti_txtCity.Size = new System.Drawing.Size(316, 24);
             this.lti_txtCity.Text = "City : ";
             this.lti_txtCity.TextSize = new System.Drawing.Size(93, 14);
-            // 
-            // lti_txtRegion
-            // 
-            this.lti_txtRegion.Control = this.txtRegion;
-            this.lti_txtRegion.Location = new System.Drawing.Point(316, 96);
-            this.lti_txtRegion.Name = "lti_txtRegion";
-            this.lti_txtRegion.Size = new System.Drawing.Size(317, 24);
-            this.lti_txtRegion.Text = "Region : ";
-            this.lti_txtRegion.TextSize = new System.Drawing.Size(93, 14);
-            // 
-            // lti_txtPostalCode
-            // 
-            this.lti_txtPostalCode.Control = this.txtPostalCode;
-            this.lti_txtPostalCode.Location = new System.Drawing.Point(316, 120);
-            this.lti_txtPostalCode.Name = "lti_txtPostalCode";
-            this.lti_txtPostalCode.Size = new System.Drawing.Size(317, 24);
-            this.lti_txtPostalCode.Text = "PostalCode : ";
-            this.lti_txtPostalCode.TextSize = new System.Drawing.Size(93, 14);
             // 
             // lti_txtCountry
             // 
@@ -631,6 +571,33 @@ namespace Dev006
             this.lti_txtPhone.Size = new System.Drawing.Size(316, 24);
             this.lti_txtPhone.Text = "Phone : ";
             this.lti_txtPhone.TextSize = new System.Drawing.Size(93, 14);
+            // 
+            // lti_txtFax
+            // 
+            this.lti_txtFax.Control = this.txtAddress1;
+            this.lti_txtFax.Location = new System.Drawing.Point(316, 144);
+            this.lti_txtFax.Name = "lti_txtFax";
+            this.lti_txtFax.Size = new System.Drawing.Size(317, 24);
+            this.lti_txtFax.Text = "Fax : ";
+            this.lti_txtFax.TextSize = new System.Drawing.Size(93, 14);
+            // 
+            // lti_txtPostalCode
+            // 
+            this.lti_txtPostalCode.Control = this.txtPostalCode;
+            this.lti_txtPostalCode.Location = new System.Drawing.Point(316, 120);
+            this.lti_txtPostalCode.Name = "lti_txtPostalCode";
+            this.lti_txtPostalCode.Size = new System.Drawing.Size(317, 24);
+            this.lti_txtPostalCode.Text = "PostalCode : ";
+            this.lti_txtPostalCode.TextSize = new System.Drawing.Size(93, 14);
+            // 
+            // lti_txtRegion
+            // 
+            this.lti_txtRegion.Control = this.txtRegion;
+            this.lti_txtRegion.Location = new System.Drawing.Point(316, 96);
+            this.lti_txtRegion.Name = "lti_txtRegion";
+            this.lti_txtRegion.Size = new System.Drawing.Size(317, 24);
+            this.lti_txtRegion.Text = "Region : ";
+            this.lti_txtRegion.TextSize = new System.Drawing.Size(93, 14);
             // 
             // ltgSub
             // 
@@ -712,6 +679,7 @@ namespace Dev006
             ((System.ComponentModel.ISupportInitialize)(this.ltc)).EndInit();
             this.ltc.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtPhone.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCountry.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPostalCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRegion.Properties)).EndInit();
@@ -723,7 +691,6 @@ namespace Dev006
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtContactName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCustomerId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKeyword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ltg)).EndInit();
@@ -734,14 +701,14 @@ namespace Dev006
             ((System.ComponentModel.ISupportInitialize)(this.lti_txtCustomerId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lti_txtContactName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lti_txtAddress)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lti_txtFax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lti_txtContactTitle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lti_txtCompanyName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lti_txtCity)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lti_txtRegion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lti_txtPostalCode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lti_txtCountry)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lti_txtPhone)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lti_txtFax)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lti_txtPostalCode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lti_txtRegion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ltgSub)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
@@ -783,17 +750,6 @@ namespace Dev006
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
-        private DevExpress.XtraGrid.Columns.GridColumn gdvMain_Col_CustomerID;
-        private DevExpress.XtraGrid.Columns.GridColumn gdvMain_Col_CompanyName;
-        private DevExpress.XtraGrid.Columns.GridColumn gdvMain_Col_ContactName;
-        private DevExpress.XtraGrid.Columns.GridColumn gdvMain_Col_ContactTitle;
-        private DevExpress.XtraGrid.Columns.GridColumn gdvMain_Col_Address;
-        private DevExpress.XtraGrid.Columns.GridColumn gdvMain_Col_City;
-        private DevExpress.XtraGrid.Columns.GridColumn gdvMain_Col_Region;
-        private DevExpress.XtraGrid.Columns.GridColumn gdvMain_Col_PostalCode;
-        private DevExpress.XtraGrid.Columns.GridColumn gdvMain_Col_Country;
-        private DevExpress.XtraGrid.Columns.GridColumn gdvMain_Col_Phone;
-        private DevExpress.XtraGrid.Columns.GridColumn gdvMain_Col_Fax;
         private System.Windows.Forms.BindingSource customerBindingSource;
         private DevExpress.XtraEditors.TextEdit txtPhone;
         private DevExpress.XtraEditors.TextEdit txtCountry;
@@ -809,5 +765,16 @@ namespace Dev006
         private DevExpress.XtraLayout.LayoutControlItem lti_txtPostalCode;
         private DevExpress.XtraLayout.LayoutControlItem lti_txtCountry;
         private DevExpress.XtraLayout.LayoutControlItem lti_txtPhone;
+        private DevExpress.XtraGrid.Columns.GridColumn colCustomerID;
+        private DevExpress.XtraGrid.Columns.GridColumn colCompanyName;
+        private DevExpress.XtraGrid.Columns.GridColumn colContactName;
+        private DevExpress.XtraGrid.Columns.GridColumn colContactTitle;
+        private DevExpress.XtraGrid.Columns.GridColumn colAddress;
+        private DevExpress.XtraGrid.Columns.GridColumn colCity;
+        private DevExpress.XtraGrid.Columns.GridColumn colRegion;
+        private DevExpress.XtraGrid.Columns.GridColumn colPostalCode;
+        private DevExpress.XtraGrid.Columns.GridColumn colCountry;
+        private DevExpress.XtraGrid.Columns.GridColumn colPhone;
+        private DevExpress.XtraGrid.Columns.GridColumn colFax;
     }
 }

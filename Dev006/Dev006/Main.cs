@@ -20,7 +20,7 @@ namespace Dev006
 
         private void Main_Load(object sender, EventArgs e)
         {
-
+            ltgMain.Enabled = false;
         }
 
         private void Btn_Click(object sender, EventArgs e)
@@ -28,6 +28,9 @@ namespace Dev006
             switch (((SimpleButton)sender).Name)
             {
                 case "btnNew":
+                    ltgMain.Enabled = true;
+                    txtCustomerId.Focus();
+                    Customer customer = new Customer();
                     break;
 
                 case "btnSave": 
@@ -43,5 +46,22 @@ namespace Dev006
             }
         }
 
+        private void txtKeyword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                if (string.IsNullOrEmpty(txtKeyword.Text))
+                {
+                    gdcMain.DataSource = customerBindingSource;
+                }
+                else
+                {
+                    var query = from o in customerBindingSource.DataSource as List<Customer>
+                                where o.CustomerID == txtKeyword.Text||o.ContactName.Contains(txtContactName.Text)
+                                select o ;
+                    gdcMain.DataSource = query.ToList();
+                }
+            }
+        }
     }
 }
