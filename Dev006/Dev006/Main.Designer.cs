@@ -159,46 +159,52 @@ namespace Dev006
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(120, 306);
+            this.txtPhone.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "Phone", true));
+            this.txtPhone.Location = new System.Drawing.Point(120, 258);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(533, 20);
+            this.txtPhone.Size = new System.Drawing.Size(216, 20);
             this.txtPhone.StyleController = this.ltc;
             this.txtPhone.TabIndex = 19;
             // 
             // txtCountry
             // 
-            this.txtCountry.Location = new System.Drawing.Point(120, 282);
+            this.txtCountry.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "Country", true));
+            this.txtCountry.Location = new System.Drawing.Point(120, 234);
             this.txtCountry.Name = "txtCountry";
-            this.txtCountry.Size = new System.Drawing.Size(533, 20);
+            this.txtCountry.Size = new System.Drawing.Size(216, 20);
             this.txtCountry.StyleController = this.ltc;
             this.txtCountry.TabIndex = 18;
             // 
             // txtPostalCode
             // 
-            this.txtPostalCode.Location = new System.Drawing.Point(120, 258);
+            this.txtPostalCode.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "PostalCode", true));
+            this.txtPostalCode.Location = new System.Drawing.Point(436, 234);
             this.txtPostalCode.Name = "txtPostalCode";
-            this.txtPostalCode.Size = new System.Drawing.Size(533, 20);
+            this.txtPostalCode.Size = new System.Drawing.Size(217, 20);
             this.txtPostalCode.StyleController = this.ltc;
             this.txtPostalCode.TabIndex = 17;
             // 
             // txtRegion
             // 
-            this.txtRegion.Location = new System.Drawing.Point(120, 234);
+            this.txtRegion.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "Region", true));
+            this.txtRegion.Location = new System.Drawing.Point(436, 210);
             this.txtRegion.Name = "txtRegion";
-            this.txtRegion.Size = new System.Drawing.Size(533, 20);
+            this.txtRegion.Size = new System.Drawing.Size(217, 20);
             this.txtRegion.StyleController = this.ltc;
             this.txtRegion.TabIndex = 16;
             // 
             // txtCity
             // 
+            this.txtCity.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "City", true));
             this.txtCity.Location = new System.Drawing.Point(120, 210);
             this.txtCity.Name = "txtCity";
-            this.txtCity.Size = new System.Drawing.Size(533, 20);
+            this.txtCity.Size = new System.Drawing.Size(216, 20);
             this.txtCity.StyleController = this.ltc;
             this.txtCity.TabIndex = 15;
             // 
             // txtCompanyName
             // 
+            this.txtCompanyName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "CompanyName", true));
             this.txtCompanyName.Location = new System.Drawing.Point(120, 162);
             this.txtCompanyName.Name = "txtCompanyName";
             this.txtCompanyName.Size = new System.Drawing.Size(233, 20);
@@ -207,6 +213,7 @@ namespace Dev006
             // 
             // txtContactTitle
             // 
+            this.txtContactTitle.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "ContactTitle", true));
             this.txtContactTitle.Location = new System.Drawing.Point(453, 162);
             this.txtContactTitle.Name = "txtContactTitle";
             this.txtContactTitle.Size = new System.Drawing.Size(200, 20);
@@ -263,10 +270,10 @@ namespace Dev006
             // 
             // gdcMain
             // 
-            this.gdcMain.Location = new System.Drawing.Point(24, 399);
+            this.gdcMain.Location = new System.Drawing.Point(24, 327);
             this.gdcMain.MainView = this.gdvMain;
             this.gdcMain.Name = "gdcMain";
-            this.gdcMain.Size = new System.Drawing.Size(629, 220);
+            this.gdcMain.Size = new System.Drawing.Size(629, 292);
             this.gdcMain.TabIndex = 9;
             this.gdcMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gdvMain});
@@ -403,14 +410,16 @@ namespace Dev006
             // 
             // txtAddress1
             // 
-            this.txtAddress1.Location = new System.Drawing.Point(120, 330);
+            this.txtAddress1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "Fax", true));
+            this.txtAddress1.Location = new System.Drawing.Point(436, 258);
             this.txtAddress1.Name = "txtAddress1";
-            this.txtAddress1.Size = new System.Drawing.Size(533, 20);
+            this.txtAddress1.Size = new System.Drawing.Size(217, 20);
             this.txtAddress1.StyleController = this.ltc;
             this.txtAddress1.TabIndex = 8;
             // 
             // txtAddress
             // 
+            this.txtAddress.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "Address", true));
             this.txtAddress.Location = new System.Drawing.Point(120, 186);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(533, 20);
@@ -465,9 +474,9 @@ namespace Dev006
             columnDefinition1});
             rowDefinition1.Height = 69D;
             rowDefinition1.SizeType = System.Windows.Forms.SizeType.AutoSize;
-            rowDefinition2.Height = 285D;
+            rowDefinition2.Height = 213D;
             rowDefinition2.SizeType = System.Windows.Forms.SizeType.AutoSize;
-            rowDefinition3.Height = 295D;
+            rowDefinition3.Height = 367D;
             rowDefinition3.SizeType = System.Windows.Forms.SizeType.AutoSize;
             this.ltg.OptionsTableLayoutGroup.RowDefinitions.AddRange(new DevExpress.XtraLayout.RowDefinition[] {
             rowDefinition1,
@@ -509,18 +518,18 @@ namespace Dev006
             this.lti_txtCustomerId,
             this.lti_txtContactName,
             this.lti_txtAddress,
-            this.lti_txtFax,
             this.lti_txtContactTitle,
             this.lti_txtCompanyName,
             this.lti_txtCity,
-            this.lti_txtRegion,
-            this.lti_txtPostalCode,
             this.lti_txtCountry,
-            this.lti_txtPhone});
+            this.lti_txtPhone,
+            this.lti_txtFax,
+            this.lti_txtPostalCode,
+            this.lti_txtRegion});
             this.ltgMain.Location = new System.Drawing.Point(0, 69);
             this.ltgMain.Name = "ltgMain";
             this.ltgMain.OptionsTableLayoutItem.RowIndex = 1;
-            this.ltgMain.Size = new System.Drawing.Size(657, 285);
+            this.ltgMain.Size = new System.Drawing.Size(657, 213);
             this.ltgMain.Text = "Information";
             // 
             // lti_txtCustomerId
@@ -554,9 +563,9 @@ namespace Dev006
             // lti_txtFax
             // 
             this.lti_txtFax.Control = this.txtAddress1;
-            this.lti_txtFax.Location = new System.Drawing.Point(0, 216);
+            this.lti_txtFax.Location = new System.Drawing.Point(316, 144);
             this.lti_txtFax.Name = "lti_txtFax";
-            this.lti_txtFax.Size = new System.Drawing.Size(633, 24);
+            this.lti_txtFax.Size = new System.Drawing.Size(317, 24);
             this.lti_txtFax.Text = "Fax : ";
             this.lti_txtFax.TextSize = new System.Drawing.Size(93, 14);
             // 
@@ -583,43 +592,43 @@ namespace Dev006
             this.lti_txtCity.Control = this.txtCity;
             this.lti_txtCity.Location = new System.Drawing.Point(0, 96);
             this.lti_txtCity.Name = "lti_txtCity";
-            this.lti_txtCity.Size = new System.Drawing.Size(633, 24);
+            this.lti_txtCity.Size = new System.Drawing.Size(316, 24);
             this.lti_txtCity.Text = "City : ";
             this.lti_txtCity.TextSize = new System.Drawing.Size(93, 14);
             // 
             // lti_txtRegion
             // 
             this.lti_txtRegion.Control = this.txtRegion;
-            this.lti_txtRegion.Location = new System.Drawing.Point(0, 120);
+            this.lti_txtRegion.Location = new System.Drawing.Point(316, 96);
             this.lti_txtRegion.Name = "lti_txtRegion";
-            this.lti_txtRegion.Size = new System.Drawing.Size(633, 24);
+            this.lti_txtRegion.Size = new System.Drawing.Size(317, 24);
             this.lti_txtRegion.Text = "Region : ";
             this.lti_txtRegion.TextSize = new System.Drawing.Size(93, 14);
             // 
             // lti_txtPostalCode
             // 
             this.lti_txtPostalCode.Control = this.txtPostalCode;
-            this.lti_txtPostalCode.Location = new System.Drawing.Point(0, 144);
+            this.lti_txtPostalCode.Location = new System.Drawing.Point(316, 120);
             this.lti_txtPostalCode.Name = "lti_txtPostalCode";
-            this.lti_txtPostalCode.Size = new System.Drawing.Size(633, 24);
+            this.lti_txtPostalCode.Size = new System.Drawing.Size(317, 24);
             this.lti_txtPostalCode.Text = "PostalCode : ";
             this.lti_txtPostalCode.TextSize = new System.Drawing.Size(93, 14);
             // 
             // lti_txtCountry
             // 
             this.lti_txtCountry.Control = this.txtCountry;
-            this.lti_txtCountry.Location = new System.Drawing.Point(0, 168);
+            this.lti_txtCountry.Location = new System.Drawing.Point(0, 120);
             this.lti_txtCountry.Name = "lti_txtCountry";
-            this.lti_txtCountry.Size = new System.Drawing.Size(633, 24);
+            this.lti_txtCountry.Size = new System.Drawing.Size(316, 24);
             this.lti_txtCountry.Text = "Country : ";
             this.lti_txtCountry.TextSize = new System.Drawing.Size(93, 14);
             // 
             // lti_txtPhone
             // 
             this.lti_txtPhone.Control = this.txtPhone;
-            this.lti_txtPhone.Location = new System.Drawing.Point(0, 192);
+            this.lti_txtPhone.Location = new System.Drawing.Point(0, 144);
             this.lti_txtPhone.Name = "lti_txtPhone";
-            this.lti_txtPhone.Size = new System.Drawing.Size(633, 24);
+            this.lti_txtPhone.Size = new System.Drawing.Size(316, 24);
             this.lti_txtPhone.Text = "Phone : ";
             this.lti_txtPhone.TextSize = new System.Drawing.Size(93, 14);
             // 
@@ -632,10 +641,10 @@ namespace Dev006
             this.layoutControlItem3,
             this.layoutControlItem4,
             this.emptySpaceItem1});
-            this.ltgSub.Location = new System.Drawing.Point(0, 354);
+            this.ltgSub.Location = new System.Drawing.Point(0, 282);
             this.ltgSub.Name = "ltgSub";
             this.ltgSub.OptionsTableLayoutItem.RowIndex = 2;
-            this.ltgSub.Size = new System.Drawing.Size(657, 295);
+            this.ltgSub.Size = new System.Drawing.Size(657, 367);
             this.ltgSub.Text = "List";
             // 
             // layoutControlItem6
@@ -643,14 +652,14 @@ namespace Dev006
             this.layoutControlItem6.Control = this.gdcMain;
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(633, 224);
+            this.layoutControlItem6.Size = new System.Drawing.Size(633, 296);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.btnNew;
-            this.layoutControlItem1.Location = new System.Drawing.Point(277, 224);
+            this.layoutControlItem1.Location = new System.Drawing.Point(277, 296);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(89, 26);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
@@ -659,7 +668,7 @@ namespace Dev006
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.btnCancel;
-            this.layoutControlItem2.Location = new System.Drawing.Point(455, 224);
+            this.layoutControlItem2.Location = new System.Drawing.Point(455, 296);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(89, 26);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
@@ -668,7 +677,7 @@ namespace Dev006
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.btnEdit;
-            this.layoutControlItem3.Location = new System.Drawing.Point(366, 224);
+            this.layoutControlItem3.Location = new System.Drawing.Point(366, 296);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(89, 26);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
@@ -677,7 +686,7 @@ namespace Dev006
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.btnSave;
-            this.layoutControlItem4.Location = new System.Drawing.Point(544, 224);
+            this.layoutControlItem4.Location = new System.Drawing.Point(544, 296);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(89, 26);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
@@ -686,7 +695,7 @@ namespace Dev006
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 224);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 296);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
             this.emptySpaceItem1.Size = new System.Drawing.Size(277, 26);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
