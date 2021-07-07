@@ -39,9 +39,9 @@ namespace Dev008
             DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
             this.ltc = new DevExpress.XtraLayout.LayoutControl();
             this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtCamera = new DevExpress.XtraEditors.TextEdit();
+            this.txtPower = new DevExpress.XtraEditors.TextEdit();
+            this.txtRFID = new DevExpress.XtraEditors.TextEdit();
             this.bntOn = new DevExpress.XtraEditors.SimpleButton();
             this.btnLoad = new DevExpress.XtraEditors.SimpleButton();
             this.btnStop = new DevExpress.XtraEditors.SimpleButton();
@@ -49,9 +49,9 @@ namespace Dev008
             this.btnStart = new DevExpress.XtraEditors.SimpleButton();
             this.btnUnload = new DevExpress.XtraEditors.SimpleButton();
             this.btnCapture = new DevExpress.XtraEditors.SimpleButton();
-            this.pieCapture = new DevExpress.XtraEditors.PictureEdit();
+            this.txtPort = new DevExpress.XtraEditors.PictureEdit();
             this.pieStreaming = new DevExpress.XtraEditors.PictureEdit();
-            this.mmeCapture = new DevExpress.XtraEditors.MemoEdit();
+            this.mmeQR = new DevExpress.XtraEditors.MemoEdit();
             this.mmeRFID = new DevExpress.XtraEditors.MemoEdit();
             this.ltg = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -81,12 +81,12 @@ namespace Dev008
             ((System.ComponentModel.ISupportInitialize)(this.ltc)).BeginInit();
             this.ltc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pieCapture.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCamera.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPower.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRFID.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPort.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pieStreaming.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mmeCapture.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mmeQR.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mmeRFID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ltg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
@@ -118,9 +118,9 @@ namespace Dev008
             // ltc
             // 
             this.ltc.Controls.Add(this.textEdit4);
-            this.ltc.Controls.Add(this.textEdit3);
-            this.ltc.Controls.Add(this.textEdit2);
-            this.ltc.Controls.Add(this.textEdit1);
+            this.ltc.Controls.Add(this.txtCamera);
+            this.ltc.Controls.Add(this.txtPower);
+            this.ltc.Controls.Add(this.txtRFID);
             this.ltc.Controls.Add(this.bntOn);
             this.ltc.Controls.Add(this.btnLoad);
             this.ltc.Controls.Add(this.btnStop);
@@ -128,9 +128,9 @@ namespace Dev008
             this.ltc.Controls.Add(this.btnStart);
             this.ltc.Controls.Add(this.btnUnload);
             this.ltc.Controls.Add(this.btnCapture);
-            this.ltc.Controls.Add(this.pieCapture);
+            this.ltc.Controls.Add(this.txtPort);
             this.ltc.Controls.Add(this.pieStreaming);
-            this.ltc.Controls.Add(this.mmeCapture);
+            this.ltc.Controls.Add(this.mmeQR);
             this.ltc.Controls.Add(this.mmeRFID);
             this.ltc.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ltc.Location = new System.Drawing.Point(0, 0);
@@ -150,35 +150,35 @@ namespace Dev008
             this.textEdit4.StyleController = this.ltc;
             this.textEdit4.TabIndex = 19;
             // 
-            // textEdit3
+            // txtCamera
             // 
-            this.textEdit3.Location = new System.Drawing.Point(606, 80);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Properties.Appearance.Font = new System.Drawing.Font("맑은 고딕", 14F);
-            this.textEdit3.Properties.Appearance.Options.UseFont = true;
-            this.textEdit3.Size = new System.Drawing.Size(376, 32);
-            this.textEdit3.StyleController = this.ltc;
-            this.textEdit3.TabIndex = 18;
+            this.txtCamera.Location = new System.Drawing.Point(606, 80);
+            this.txtCamera.Name = "txtCamera";
+            this.txtCamera.Properties.Appearance.Font = new System.Drawing.Font("맑은 고딕", 14F);
+            this.txtCamera.Properties.Appearance.Options.UseFont = true;
+            this.txtCamera.Size = new System.Drawing.Size(376, 32);
+            this.txtCamera.StyleController = this.ltc;
+            this.txtCamera.TabIndex = 18;
             // 
-            // textEdit2
+            // txtPower
             // 
-            this.textEdit2.Location = new System.Drawing.Point(121, 80);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("맑은 고딕", 14F);
-            this.textEdit2.Properties.Appearance.Options.UseFont = true;
-            this.textEdit2.Size = new System.Drawing.Size(376, 32);
-            this.textEdit2.StyleController = this.ltc;
-            this.textEdit2.TabIndex = 17;
+            this.txtPower.Location = new System.Drawing.Point(121, 80);
+            this.txtPower.Name = "txtPower";
+            this.txtPower.Properties.Appearance.Font = new System.Drawing.Font("맑은 고딕", 14F);
+            this.txtPower.Properties.Appearance.Options.UseFont = true;
+            this.txtPower.Size = new System.Drawing.Size(376, 32);
+            this.txtPower.StyleController = this.ltc;
+            this.txtPower.TabIndex = 17;
             // 
-            // textEdit1
+            // txtRFID
             // 
-            this.textEdit1.Location = new System.Drawing.Point(121, 116);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("맑은 고딕", 14F);
-            this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Size = new System.Drawing.Size(376, 32);
-            this.textEdit1.StyleController = this.ltc;
-            this.textEdit1.TabIndex = 16;
+            this.txtRFID.Location = new System.Drawing.Point(121, 116);
+            this.txtRFID.Name = "txtRFID";
+            this.txtRFID.Properties.Appearance.Font = new System.Drawing.Font("맑은 고딕", 14F);
+            this.txtRFID.Properties.Appearance.Options.UseFont = true;
+            this.txtRFID.Size = new System.Drawing.Size(376, 32);
+            this.txtRFID.StyleController = this.ltc;
+            this.txtRFID.TabIndex = 16;
             // 
             // bntOn
             // 
@@ -193,6 +193,7 @@ namespace Dev008
             this.bntOn.StyleController = this.ltc;
             this.bntOn.TabIndex = 15;
             this.bntOn.Text = "ON";
+            this.bntOn.Click += new System.EventHandler(this.Button_Click);
             // 
             // btnLoad
             // 
@@ -207,6 +208,7 @@ namespace Dev008
             this.btnLoad.StyleController = this.ltc;
             this.btnLoad.TabIndex = 14;
             this.btnLoad.Text = "Load";
+            this.btnLoad.Click += new System.EventHandler(this.Button_Click);
             // 
             // btnStop
             // 
@@ -219,6 +221,7 @@ namespace Dev008
             this.btnStop.StyleController = this.ltc;
             this.btnStop.TabIndex = 13;
             this.btnStop.Text = "Stop";
+            this.btnStop.Click += new System.EventHandler(this.Button_Click);
             // 
             // btnOff
             // 
@@ -233,6 +236,7 @@ namespace Dev008
             this.btnOff.StyleController = this.ltc;
             this.btnOff.TabIndex = 12;
             this.btnOff.Text = "OFF";
+            this.btnOff.Click += new System.EventHandler(this.Button_Click);
             // 
             // btnStart
             // 
@@ -247,6 +251,7 @@ namespace Dev008
             this.btnStart.StyleController = this.ltc;
             this.btnStart.TabIndex = 11;
             this.btnStart.Text = "Start";
+            this.btnStart.Click += new System.EventHandler(this.Button_Click);
             // 
             // btnUnload
             // 
@@ -261,6 +266,7 @@ namespace Dev008
             this.btnUnload.StyleController = this.ltc;
             this.btnUnload.TabIndex = 10;
             this.btnUnload.Text = "UnLoad";
+            this.btnUnload.Click += new System.EventHandler(this.Button_Click);
             // 
             // btnCapture
             // 
@@ -275,15 +281,16 @@ namespace Dev008
             this.btnCapture.StyleController = this.ltc;
             this.btnCapture.TabIndex = 9;
             this.btnCapture.Text = "Capture";
+            this.btnCapture.Click += new System.EventHandler(this.Button_Click);
             // 
-            // pieCapture
+            // txtPort
             // 
-            this.pieCapture.Location = new System.Drawing.Point(505, 184);
-            this.pieCapture.Name = "pieCapture";
-            this.pieCapture.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pieCapture.Size = new System.Drawing.Size(477, 206);
-            this.pieCapture.StyleController = this.ltc;
-            this.pieCapture.TabIndex = 8;
+            this.txtPort.Location = new System.Drawing.Point(505, 184);
+            this.txtPort.Name = "txtPort";
+            this.txtPort.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.txtPort.Size = new System.Drawing.Size(477, 206);
+            this.txtPort.StyleController = this.ltc;
+            this.txtPort.TabIndex = 8;
             // 
             // pieStreaming
             // 
@@ -294,14 +301,14 @@ namespace Dev008
             this.pieStreaming.StyleController = this.ltc;
             this.pieStreaming.TabIndex = 7;
             // 
-            // mmeCapture
+            // mmeQR
             // 
-            this.mmeCapture.EditValue = "";
-            this.mmeCapture.Location = new System.Drawing.Point(505, 426);
-            this.mmeCapture.Name = "mmeCapture";
-            this.mmeCapture.Size = new System.Drawing.Size(477, 178);
-            this.mmeCapture.StyleController = this.ltc;
-            this.mmeCapture.TabIndex = 6;
+            this.mmeQR.EditValue = "";
+            this.mmeQR.Location = new System.Drawing.Point(505, 426);
+            this.mmeQR.Name = "mmeQR";
+            this.mmeQR.Size = new System.Drawing.Size(477, 178);
+            this.mmeQR.StyleController = this.ltc;
+            this.mmeQR.TabIndex = 6;
             // 
             // mmeRFID
             // 
@@ -453,7 +460,7 @@ namespace Dev008
             // 
             this.layoutControlItem12.AppearanceItemCaption.Font = new System.Drawing.Font("맑은 고딕", 14F);
             this.layoutControlItem12.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem12.Control = this.textEdit1;
+            this.layoutControlItem12.Control = this.txtRFID;
             this.layoutControlItem12.Location = new System.Drawing.Point(0, 76);
             this.layoutControlItem12.Name = "layoutControlItem12";
             this.layoutControlItem12.Size = new System.Drawing.Size(485, 36);
@@ -466,7 +473,7 @@ namespace Dev008
             // 
             this.layoutControlItem13.AppearanceItemCaption.Font = new System.Drawing.Font("맑은 고딕", 14F);
             this.layoutControlItem13.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem13.Control = this.textEdit2;
+            this.layoutControlItem13.Control = this.txtPower;
             this.layoutControlItem13.Location = new System.Drawing.Point(0, 40);
             this.layoutControlItem13.Name = "layoutControlItem13";
             this.layoutControlItem13.Size = new System.Drawing.Size(485, 36);
@@ -479,7 +486,7 @@ namespace Dev008
             // 
             this.layoutControlItem14.AppearanceItemCaption.Font = new System.Drawing.Font("맑은 고딕", 14F);
             this.layoutControlItem14.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem14.Control = this.textEdit3;
+            this.layoutControlItem14.Control = this.txtCamera;
             this.layoutControlItem14.Location = new System.Drawing.Point(485, 40);
             this.layoutControlItem14.Name = "layoutControlItem14";
             this.layoutControlItem14.Size = new System.Drawing.Size(485, 36);
@@ -540,7 +547,7 @@ namespace Dev008
             // 
             // layoutControlItem5
             // 
-            this.layoutControlItem5.Control = this.pieCapture;
+            this.layoutControlItem5.Control = this.txtPort;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.OptionsTableLayoutItem.ColumnIndex = 1;
@@ -588,7 +595,7 @@ namespace Dev008
             // 
             // layoutControlItem3
             // 
-            this.layoutControlItem3.Control = this.mmeCapture;
+            this.layoutControlItem3.Control = this.mmeQR;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.OptionsTableLayoutItem.ColumnIndex = 1;
@@ -641,12 +648,12 @@ namespace Dev008
             ((System.ComponentModel.ISupportInitialize)(this.ltc)).EndInit();
             this.ltc.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pieCapture.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCamera.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPower.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRFID.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPort.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pieStreaming.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mmeCapture.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mmeQR.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mmeRFID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ltg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
@@ -682,9 +689,9 @@ namespace Dev008
         private DevExpress.XtraLayout.LayoutControl ltc;
         private DevExpress.XtraLayout.LayoutControlGroup ltg;
         private DevExpress.XtraEditors.SimpleButton btnCapture;
-        private DevExpress.XtraEditors.PictureEdit pieCapture;
+        private DevExpress.XtraEditors.PictureEdit txtPort;
         private DevExpress.XtraEditors.PictureEdit pieStreaming;
-        private DevExpress.XtraEditors.MemoEdit mmeCapture;
+        private DevExpress.XtraEditors.MemoEdit mmeQR;
         private DevExpress.XtraEditors.MemoEdit mmeRFID;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
@@ -710,9 +717,9 @@ namespace Dev008
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private DevExpress.XtraEditors.TextEdit textEdit4;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtCamera;
+        private DevExpress.XtraEditors.TextEdit txtPower;
+        private DevExpress.XtraEditors.TextEdit txtRFID;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem14;
