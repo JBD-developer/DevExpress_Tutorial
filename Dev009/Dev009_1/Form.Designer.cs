@@ -29,10 +29,10 @@ namespace Dev009_1
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraLayout.ColumnDefinition columnDefinition2 = new DevExpress.XtraLayout.ColumnDefinition();
-            DevExpress.XtraLayout.RowDefinition rowDefinition3 = new DevExpress.XtraLayout.RowDefinition();
-            DevExpress.XtraLayout.RowDefinition rowDefinition4 = new DevExpress.XtraLayout.RowDefinition();
-            DevExpress.XtraPrinting.BarCode.QRCodeGenerator qrCodeGenerator2 = new DevExpress.XtraPrinting.BarCode.QRCodeGenerator();
+            DevExpress.XtraLayout.ColumnDefinition columnDefinition1 = new DevExpress.XtraLayout.ColumnDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition1 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition2 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraPrinting.BarCode.QRCodeGenerator qrCodeGenerator1 = new DevExpress.XtraPrinting.BarCode.QRCodeGenerator();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form));
             this.ltc = new DevExpress.XtraLayout.LayoutControl();
             this.ltg = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -50,6 +50,8 @@ namespace Dev009_1
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.btnClear = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.cbxImageFormat = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.ltc)).BeginInit();
             this.ltc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ltg)).BeginInit();
@@ -63,10 +65,13 @@ namespace Dev009_1
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxImageFormat.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             this.SuspendLayout();
             // 
             // ltc
             // 
+            this.ltc.Controls.Add(this.cbxImageFormat);
             this.ltc.Controls.Add(this.btnClear);
             this.ltc.Controls.Add(this.panel1);
             this.ltc.Controls.Add(this.btnSave);
@@ -89,17 +94,17 @@ namespace Dev009_1
             this.layoutControlGroup2});
             this.ltg.LayoutMode = DevExpress.XtraLayout.Utils.LayoutMode.Table;
             this.ltg.Name = "ltg";
-            columnDefinition2.SizeType = System.Windows.Forms.SizeType.Percent;
-            columnDefinition2.Width = 100D;
+            columnDefinition1.SizeType = System.Windows.Forms.SizeType.Percent;
+            columnDefinition1.Width = 100D;
             this.ltg.OptionsTableLayoutGroup.ColumnDefinitions.AddRange(new DevExpress.XtraLayout.ColumnDefinition[] {
-            columnDefinition2});
-            rowDefinition3.Height = 91D;
-            rowDefinition3.SizeType = System.Windows.Forms.SizeType.AutoSize;
-            rowDefinition4.Height = 354D;
-            rowDefinition4.SizeType = System.Windows.Forms.SizeType.AutoSize;
+            columnDefinition1});
+            rowDefinition1.Height = 123D;
+            rowDefinition1.SizeType = System.Windows.Forms.SizeType.AutoSize;
+            rowDefinition2.Height = 322D;
+            rowDefinition2.SizeType = System.Windows.Forms.SizeType.AutoSize;
             this.ltg.OptionsTableLayoutGroup.RowDefinitions.AddRange(new DevExpress.XtraLayout.RowDefinition[] {
-            rowDefinition3,
-            rowDefinition4});
+            rowDefinition1,
+            rowDefinition2});
             this.ltg.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.ltg.Size = new System.Drawing.Size(467, 447);
             this.ltg.TextVisible = false;
@@ -138,11 +143,12 @@ namespace Dev009_1
             this.layoutControlItem2,
             this.layoutControlItem3,
             this.emptySpaceItem2,
-            this.layoutControlItem5});
+            this.layoutControlItem5,
+            this.layoutControlItem6});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
-            this.layoutControlGroup1.Size = new System.Drawing.Size(465, 91);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(465, 123);
             this.layoutControlGroup1.Text = "QRcode Information";
             // 
             // btnCreate
@@ -150,7 +156,7 @@ namespace Dev009_1
             this.btnCreate.Appearance.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold);
             this.btnCreate.Appearance.Options.UseFont = true;
             this.btnCreate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCreate.ImageOptions.Image")));
-            this.btnCreate.Location = new System.Drawing.Point(230, 60);
+            this.btnCreate.Location = new System.Drawing.Point(230, 92);
             this.btnCreate.MaximumSize = new System.Drawing.Size(113, 25);
             this.btnCreate.MinimumSize = new System.Drawing.Size(113, 25);
             this.btnCreate.Name = "btnCreate";
@@ -163,7 +169,7 @@ namespace Dev009_1
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.btnCreate;
-            this.layoutControlItem2.Location = new System.Drawing.Point(223, 32);
+            this.layoutControlItem2.Location = new System.Drawing.Point(223, 64);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(117, 30);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
@@ -174,7 +180,7 @@ namespace Dev009_1
             this.btnSave.Appearance.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold);
             this.btnSave.Appearance.Options.UseFont = true;
             this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
-            this.btnSave.Location = new System.Drawing.Point(347, 60);
+            this.btnSave.Location = new System.Drawing.Point(347, 92);
             this.btnSave.MaximumSize = new System.Drawing.Size(113, 25);
             this.btnSave.MinimumSize = new System.Drawing.Size(113, 25);
             this.btnSave.Name = "btnSave";
@@ -187,7 +193,7 @@ namespace Dev009_1
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.btnSave;
-            this.layoutControlItem3.Location = new System.Drawing.Point(340, 32);
+            this.layoutControlItem3.Location = new System.Drawing.Point(340, 64);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(117, 30);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
@@ -199,19 +205,19 @@ namespace Dev009_1
             this.layoutControlGroup2.AppearanceGroup.Options.UseFont = true;
             this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem4});
-            this.layoutControlGroup2.Location = new System.Drawing.Point(0, 91);
+            this.layoutControlGroup2.Location = new System.Drawing.Point(0, 123);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
             this.layoutControlGroup2.OptionsTableLayoutItem.RowIndex = 1;
             this.layoutControlGroup2.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
-            this.layoutControlGroup2.Size = new System.Drawing.Size(465, 354);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(465, 322);
             this.layoutControlGroup2.Text = "QRcode Preview";
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.bccQRCode);
-            this.panel1.Location = new System.Drawing.Point(7, 119);
+            this.panel1.Location = new System.Drawing.Point(7, 151);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(453, 321);
+            this.panel1.Size = new System.Drawing.Size(453, 289);
             this.panel1.TabIndex = 7;
             // 
             // layoutControlItem4
@@ -219,7 +225,7 @@ namespace Dev009_1
             this.layoutControlItem4.Control = this.panel1;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(457, 325);
+            this.layoutControlItem4.Size = new System.Drawing.Size(457, 293);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
@@ -232,15 +238,15 @@ namespace Dev009_1
             this.bccQRCode.Location = new System.Drawing.Point(0, 0);
             this.bccQRCode.Name = "bccQRCode";
             this.bccQRCode.Padding = new System.Windows.Forms.Padding(10, 2, 10, 0);
-            this.bccQRCode.Size = new System.Drawing.Size(453, 321);
-            qrCodeGenerator2.Version = DevExpress.XtraPrinting.BarCode.QRCodeVersion.Version1;
-            this.bccQRCode.Symbology = qrCodeGenerator2;
+            this.bccQRCode.Size = new System.Drawing.Size(453, 289);
+            qrCodeGenerator1.Version = DevExpress.XtraPrinting.BarCode.QRCodeVersion.Version1;
+            this.bccQRCode.Symbology = qrCodeGenerator1;
             this.bccQRCode.TabIndex = 0;
             // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 32);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 64);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
             this.emptySpaceItem2.Size = new System.Drawing.Size(106, 30);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
@@ -250,7 +256,7 @@ namespace Dev009_1
             this.btnClear.Appearance.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold);
             this.btnClear.Appearance.Options.UseFont = true;
             this.btnClear.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnClear.ImageOptions.Image")));
-            this.btnClear.Location = new System.Drawing.Point(113, 60);
+            this.btnClear.Location = new System.Drawing.Point(113, 92);
             this.btnClear.MaximumSize = new System.Drawing.Size(113, 25);
             this.btnClear.MinimumSize = new System.Drawing.Size(113, 25);
             this.btnClear.Name = "btnClear";
@@ -263,11 +269,43 @@ namespace Dev009_1
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.btnClear;
-            this.layoutControlItem5.Location = new System.Drawing.Point(106, 32);
+            this.layoutControlItem5.Location = new System.Drawing.Point(106, 64);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(117, 30);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
+            // 
+            // cbxImageFormat
+            // 
+            this.cbxImageFormat.Location = new System.Drawing.Point(110, 60);
+            this.cbxImageFormat.Name = "cbxImageFormat";
+            this.cbxImageFormat.Properties.Appearance.Font = new System.Drawing.Font("맑은 고딕", 12F);
+            this.cbxImageFormat.Properties.Appearance.Options.UseFont = true;
+            this.cbxImageFormat.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxImageFormat.Properties.Items.AddRange(new object[] {
+            "BMP",
+            "GIF",
+            "JPEG",
+            "PNG"});
+            this.cbxImageFormat.Size = new System.Drawing.Size(350, 28);
+            this.cbxImageFormat.StyleController = this.ltc;
+            this.cbxImageFormat.TabIndex = 9;
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.AppearanceItemCaption.Font = new System.Drawing.Font("맑은 고딕", 12F);
+            this.layoutControlItem6.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem6.AppearanceItemCaption.Options.UseTextOptions = true;
+            this.layoutControlItem6.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.layoutControlItem6.Control = this.cbxImageFormat;
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 32);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(457, 32);
+            this.layoutControlItem6.Text = "Format";
+            this.layoutControlItem6.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(98, 20);
+            this.layoutControlItem6.TextToControlDistance = 5;
             // 
             // Form
             // 
@@ -291,6 +329,8 @@ namespace Dev009_1
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxImageFormat.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -313,5 +353,7 @@ namespace Dev009_1
         private DevExpress.XtraEditors.SimpleButton btnClear;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private DevExpress.XtraEditors.ComboBoxEdit cbxImageFormat;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
     }
 }
